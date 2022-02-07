@@ -1,0 +1,20 @@
+server:
+  port: 81
+
+
+spring:
+  devtools:
+    restart:
+      enabled: true
+
+  application:
+    name: CLOUD-ORDER-SERVICE
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/, http://localhost:7002/eureka/
+    fetch-registry: true
+    register-with-eureka: true
